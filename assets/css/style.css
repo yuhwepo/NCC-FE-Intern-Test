@@ -1,0 +1,161 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  position: relative;
+}
+
+:root {
+  --grey-color: #aaaaaa;
+  --white-color: white;
+  --black-color: black;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar {
+  width: 15rem;
+  background-color: var(--black-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.sidebar__list {
+}
+
+.sidebar__item {
+  padding: 1.2rem 1.6rem;
+  border-bottom: 1px solid #5c5c5c;
+  transition: all 0.2s ease-out;
+}
+
+.sidebar__item a {
+  color: var(--grey-color);
+}
+
+.sidebar__item:hover a {
+  color: var(--white-color);
+}
+
+.sidebar__item.active a {
+  color: var(--white-color);
+  font-weight: 700;
+}
+
+.sidebar__item:hover {
+  background: #5c5c5c;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container {
+  margin-left: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  margin-top: 2rem;
+}
+
+.content {
+  width: 151rem;
+}
+
+.content__block {
+  margin-top: 3rem;
+  background: #efefef;
+  min-height: 21rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-top: 3.8rem;
+}
+
+.content-description {
+  margin-top: 1.8rem;
+  max-width: 97.2rem;
+  text-align: center;
+  color: var(--black-color);
+}
+
+.course-list {
+  display: flex;
+  column-gap: 5rem;
+  margin-top: 4rem;
+}
+.course-item {
+  width: 33%;
+}
+.course-item-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.course-item-container {
+  display: flex;
+  column-gap: 1.6rem;
+  margin-top: 1.8rem;
+}
+.course-item-logo img {
+  min-width: 12.8rem;
+}
+.course-item-description {
+}
+.course-item-description--under {
+}
+
+.footer {
+  width: calc(100% - 15rem);
+  height: 7.8rem;
+  background-color: var(--white-color);
+  position: absolute;
+  bottom: 0;
+  left: 15rem;
+  border-top: 1px solid #dedede;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__content {
+}
+
+.footer-content--text {
+  color: #3e3e3e;
+}
