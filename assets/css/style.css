@@ -42,11 +42,47 @@ a {
 
 .sidebar {
   width: 15rem;
+  height: 100%;
   background-color: var(--black-color);
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  bottom: 0;
+  z-index: 2;
+  overflow-x: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.backdrop {
+  position: absolute;
+  background-color: var(--black-color);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.menu-mobile {
+  font-size: 4.3rem;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.2 linear;
+  display: none;
+}
+
+.active .sidebar {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+.active .backdrop {
+  opacity: 0.2;
+  visibility: visible;
+}
+
+.menu-mobile:hover {
+  opacity: 0.5;
 }
 
 .sidebar__list {
@@ -82,6 +118,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 10.8rem;
 }
 
 .logo img {
@@ -89,7 +126,8 @@ a {
 }
 
 .content {
-  width: 151rem;
+  width: 100%;
+  padding: 0 12.9rem;
 }
 
 .content__block {
@@ -100,12 +138,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3.8rem 4rem;
 }
 
 .content-title {
   font-size: 1.8rem;
   font-weight: 700;
-  padding-top: 3.8rem;
 }
 
 .content-description {
@@ -117,7 +155,7 @@ a {
 
 .course-list {
   display: flex;
-  column-gap: 5rem;
+  gap: 5rem;
   margin-top: 4rem;
 }
 .course-item {
@@ -144,16 +182,16 @@ a {
   width: calc(100% - 15rem);
   height: 7.8rem;
   background-color: var(--white-color);
-  position: absolute;
-  bottom: 0;
-  left: 15rem;
   border-top: 1px solid #dedede;
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-left: 15rem;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer__content {
+  padding-left: 12.9rem;
 }
 
 .footer-content--text {

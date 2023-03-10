@@ -1,0 +1,68 @@
+@media (min-width: 740px) and (max-width: 1480px) {
+  .content {
+    width: 100%;
+    padding: 4rem;
+  }
+
+  .course-list {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .course-item {
+    min-width: 48%;
+    /* width: 100%; */
+  }
+
+  .footer__content {
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 995px) {
+  /* .course-list {
+    flex-wrap: wrap;
+    gap: 3rem;
+  } */
+  .course-item {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 739px) {
+  .sidebar {
+    width: calc(100% / 2);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  .menu-mobile {
+    display: block;
+  }
+  .container {
+    margin-left: 0;
+  }
+  .content {
+    width: 100%;
+    padding: 4rem;
+  }
+
+  .course-list {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .course-item {
+    width: 100%;
+  }
+
+  .footer {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .footer__content {
+    padding: 4rem;
+  }
+}
